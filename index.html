@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1457a6">
+<title>دستیار هوشمند طراحی پرامپت ریاضی متوسطه اول | MathEdu789</title>
+<style>
+:root{--navy:#173b70;--blue:#2463eb;--teal:#0f9f91;--gold:#f3b640;--ink:#17243b;--muted:#63718a;--line:#dce5f1;--bg:#f4f7fc;--card:#fff;--soft:#edf4ff;--danger:#b42318;--shadow:0 12px 32px rgba(28,58,103,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#f4f8ff,#f8fbff 45%,#eefaf8);color:var(--ink);font-family:"Vazirmatn","IRANSansX","Estedad","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.85;letter-spacing:-.12px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #8bb7ff;outline-offset:2px}
+header{background:radial-gradient(circle at 12% 15%,#ffffff20 0 2px,transparent 3px),linear-gradient(115deg,#102c55 0%,#1e56a5 55%,#087f80 100%);color:#fff;padding:22px 18px 34px;position:relative;overflow:hidden;box-shadow:0 12px 35px #173b7025}header:after{content:"∑  π  √  x²";position:absolute;left:4%;top:8px;font-size:38px;opacity:.12;letter-spacing:12px;transform:rotate(-8deg);pointer-events:none}.head-inner,.container{width:min(1180px,calc(100% - 30px));margin:auto}.brand{display:flex;align-items:center;gap:12px}.district-label{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:7px 13px;border:1px solid #ffffff55;background:#ffffff17;border-radius:999px;font-size:13px;font-weight:700;box-shadow:0 4px 16px #061c3920}.district-label:before{content:"";width:7px;height:7px;background:#ffd166;border-radius:50%;box-shadow:0 0 0 4px #ffd16625}.brand-mark{display:grid;place-items:center;width:52px;height:52px;border:1px solid #ffffff70;background:#ffffff18;border-radius:16px;font-weight:900;font-size:19px;letter-spacing:-1px}.brand small{display:block;color:#d8e8ff;font-size:12px}.brand strong{font-size:18px}.hero h1{font-size:clamp(22px,3vw,34px);line-height:1.5;margin:20px 0 5px;max-width:850px}.hero p{margin:0;color:#e4efff;max-width:780px}.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.pill{font-size:12px;padding:5px 11px;border-radius:999px;background:#ffffff1c;border:1px solid #ffffff42}
+.container{padding:24px 0 45px}.top-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}.progress-wrap{flex:1;min-width:230px;background:#e2eaf6;border-radius:99px;height:8px;overflow:hidden}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .25s}.step-caption{font-size:13px;color:var(--muted);white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,.75fr);gap:20px;align-items:start}.main-col,.side-col{display:grid;gap:18px}.card{background:var(--card);border:1px solid #dfe7f2;border-radius:20px;padding:23px;box-shadow:0 10px 28px rgba(28,58,103,.055);min-width:0;transition:box-shadow .18s,border-color .18s}.card:hover{border-color:#cbd9ee;box-shadow:0 14px 32px rgba(28,58,103,.085)}.card-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px}.step-num{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--soft);color:var(--blue);font-weight:bold}.card h2{font-size:18px;margin:0 0 3px}.sub{font-size:12px;color:var(--muted);margin:0}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field{min-width:0}.field.full{grid-column:1/-1}label,.field-label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}input[type=text],input[type=number],select,textarea{width:100%;border:1px solid #cbd7e7;border-radius:10px;background:#fff;padding:10px 12px;color:var(--ink);min-height:43px}textarea{min-height:95px;resize:vertical}input::placeholder,textarea::placeholder{color:#9aa7b8}.hint{font-size:11px;color:var(--muted);margin-top:4px}.choices{display:flex;gap:8px;flex-wrap:wrap}.choice{position:relative;display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #d2deec;border-radius:12px;background:#fff;font-size:12.5px;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}.choice:hover{border-color:#8db0ed;transform:translateY(-1px)}.choice:has(input:checked){background:#eaf2ff;border-color:#5e91f4;color:#174ea6}.choice input{accent-color:var(--blue);margin:0}.choices.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.section-note{border-right:3px solid var(--teal);padding:8px 11px;background:#effbf8;color:#225b56;border-radius:7px;font-size:12px;margin:13px 0 0}.hidden{display:none!important}.btn{border:0;border-radius:12px;padding:10px 16px;font-weight:700;font-size:13px;transition:transform .12s,filter .12s,box-shadow .12s}.btn:hover{filter:brightness(.98);box-shadow:0 5px 12px #173b7014}.btn:active{transform:translateY(1px)}.btn-primary{background:var(--blue);color:#fff}.btn-teal{background:var(--teal);color:#fff}.btn-light{background:#edf3fb;color:#25466f;border:1px solid #d8e2ef}.btn-danger{background:#fff0ee;color:var(--danger);border:1px solid #ffd4ce}.btn-row{display:flex;gap:8px;flex-wrap:wrap}.btn-row .btn{flex:0 0 auto}.side-card{position:sticky;top:12px}.score{display:flex;align-items:center;gap:14px;margin:14px 0}.score-ring{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--teal) var(--score,0%),#e7edf5 0);position:relative;flex:none}.score-ring:before{content:"";position:absolute;inset:7px;background:#fff;border-radius:50%}.score-ring strong{position:relative;font-size:18px}.checklist{display:grid;gap:8px}.checkitem{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#4c5b71}.checkitem input{margin-top:5px;accent-color:var(--teal)}.checkitem span{flex:1}.checkitem .status{font-size:11px;color:#8793a5}.sample-list{display:grid;gap:8px}.sample{display:flex;justify-content:space-between;align-items:center;text-align:right;gap:8px;padding:10px 11px;border:1px solid var(--line);background:#fff;border-radius:10px;color:var(--ink)}.sample:hover{border-color:#80a9ef;background:#f6f9ff}.sample b{font-size:12px}.sample small{display:block;font-size:11px;color:var(--muted)}.result-card{margin-top:20px}.result-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}.result-head h2{margin:0;font-size:19px}.result-tools{display:flex;gap:8px;flex-wrap:wrap}.result-area{min-height:320px;font-family:"Vazirmatn","IRANSansX","Estedad","Segoe UI",Tahoma,Arial,sans-serif;line-height:2.05;letter-spacing:0;background:#fbfdff;border:1px solid #cbd9ec;padding:17px;border-radius:12px;direction:rtl;white-space:pre-wrap}.result-meta{font-size:12px;color:var(--muted);margin-top:8px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.toast{position:fixed;bottom:18px;left:18px;z-index:10;background:#142b4c;color:#fff;padding:12px 16px;border-radius:11px;box-shadow:var(--shadow);max-width:min(420px,calc(100% - 36px));font-size:13px;opacity:0;transform:translateY(8px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}footer{text-align:center;color:#718099;font-size:12px;padding:0 15px 24px}.muted{color:var(--muted)}.divider{height:1px;background:var(--line);margin:18px 0}.tiny{font-size:11px;color:var(--muted)}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.side-card{position:static}.side-col{grid-template-columns:repeat(2,minmax(0,1fr))}.side-col .side-card{grid-column:1/-1}}
+@media(max-width:600px){header{padding:20px 0 25px}.head-inner,.container{width:min(100% - 20px,1180px)}.brand-mark{width:44px;height:44px}.brand strong{font-size:15px}.hero h1{font-size:22px}.card{padding:16px;border-radius:14px}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.side-col{grid-template-columns:1fr}.choices.grid{grid-template-columns:1fr}.result-head{align-items:flex-start}.result-tools{width:100%}.result-tools .btn{flex:1}.top-actions{align-items:flex-start}.progress-wrap{min-width:100%}}
+@media print{header,.top-actions,.main-col,.side-col,.result-tools,footer{display:none!important}body{background:#fff}.container{width:100%;padding:0}.result-card{box-shadow:none;border:0;padding:0}.result-area{border:0;min-height:0}}
+</style>
+</head>
+<body>
+<header><div class="head-inner">
+  <div class="brand"><div class="brand-mark" aria-hidden="true">ME<br>789</div><div><strong>MathEdu789</strong><small>آموزش ریاضی</small></div></div>
+  <div class="hero"><div class="district-label">سرگروه آموزش ریاضی منطقه خانمیرزا</div><h1>دستیار هوشمند طراحی پرامپت ریاضی متوسطه اول</h1><p>مشخصات آموزشی را انتخاب کنید و یک پرامپت دقیق، قابل ویرایش و آماده کپی برای ساخت محتوای ریاضی با هوش مصنوعی بسازید.</p><div class="pills"><span class="pill">کاملاً محلی</span><span class="pill">بدون نیاز به API</span><span class="pill">مناسب پایه‌های هفتم تا نهم</span></div></div>
+</div></header>
+<main class="container">
+  <div class="top-actions"><div class="step-caption" id="stepCaption">مرحله ۱ از ۶ · مشخصات آموزشی</div><div class="progress-wrap" role="progressbar" aria-label="پیشرفت تکمیل فرم" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar" id="progressBar"></div></div><div class="btn-row"><button class="btn btn-light" id="savePrefs" type="button">ذخیره تنظیمات</button><button class="btn btn-light" id="loadPrefs" type="button">بازیابی تنظیمات</button></div></div>
+  <div class="layout">
+    <div class="main-col">
+      <section class="card" id="step1"><div class="card-head"><div class="step-num">۱</div><div><h2>مشخصات آموزشی</h2><p class="sub">با چند انتخاب ساده، زمینه یادگیری را مشخص کنید.</p></div></div>
+        <div class="fields">
+          <div class="field"><label for="grade">پایه تحصیلی</label><select id="grade"><option value="هفتم">هفتم</option><option value="هشتم">هشتم</option><option value="نهم">نهم</option></select></div>
+          <div class="field"><label for="topic">موضوع ریاضی</label><select id="topic"><option>عددهای صحیح</option><option>کسر و عددهای گویا</option><option>توان و ریشه</option><option>عبارت‌های جبری</option><option>معادله و نامعادله</option><option>نسبت، تناسب و درصد</option><option>هندسه</option><option>استدلال و اثبات هندسی</option><option>مختصات و نمودار</option><option>آمار و احتمال</option><option>الگوها و دنباله‌ها</option><option value="__other">سایر موضوعات</option></select></div>
+          <div class="field hidden" id="customTopicWrap"><label for="customTopic">موضوع دلخواه</label><input id="customTopic" type="text" placeholder="موضوع ریاضی را وارد کنید"></div>
+          <div class="field"><label for="chapter">نام فصل یا بخش کتاب <span class="muted">(اختیاری)</span></label><input id="chapter" type="text" placeholder="مثلاً فصل معادله‌ها"></div>
+          <div class="field full"><label for="objective">هدف یادگیری</label><textarea id="objective" placeholder="در پایان فعالیت، دانش‌آموز بتواند چه کاری را انجام دهد؟"></textarea><div class="hint">هدف را تا حد امکان با فعل قابل مشاهده بنویسید؛ مانند توضیح دهد، محاسبه کند یا مقایسه کند.</div></div>
+          <div class="field"><label for="prereq">پیش‌نیازهای دانش‌آموزان</label><input id="prereq" type="text" placeholder="مثلاً شناخت محور اعداد"></div>
+          <div class="field"><label for="level">سطح فعلی کلاس</label><select id="level"><option>ترکیبی</option><option>نیازمند تقویت پایه</option><option>متوسط</option><option>قوی</option></select></div>
+          <div class="field"><label for="duration">مدت زمان فعالیت (دقیقه)</label><input id="duration" type="number" min="5" max="240" value="۳۰"></div>
+          <div class="field"><label for="setting">شیوه اجرا</label><select id="setting"><option>کل کلاس</option><option>فردی</option><option>گروهی</option><option>آموزش آنلاین</option></select></div>
+        </div>
+      </section>
+      <section class="card" id="step2"><div class="card-head"><div class="step-num">۲</div><div><h2>نوع خروجی آموزشی</h2><p class="sub">نوع محصولی را انتخاب کنید که می‌خواهید هوش مصنوعی تولید کند.</p></div></div>
+        <div class="field"><label for="outputType">خروجی موردنظر</label><select id="outputType">
+          <option value="ابزار تعاملی ریاضی با HTML">ابزار تعاملی ریاضی با HTML</option><option>بازی آموزشی ریاضی</option><option>شبیه‌سازی یک مفهوم ریاضی</option><option>فعالیت اکتشافی و کشف رابطه</option><option>طرح درس کامل با رویکرد CPA</option><option>فعالیت دست‌ورزی مجازی</option><option>کاربرگ آموزشی</option><option>آزمون تشخیصی</option><option>آزمون تکوینی و ارزشیابی حین تدریس</option><option>آزمون پایانی همراه با پاسخ تشریحی</option><option>فعالیت حل مسئله و مدل‌سازی ریاضی</option><option>آموزش گام‌به‌گام یک مفهوم دشوار</option><option>ابزار رسم نمودار، شکل هندسی یا نمایش روابط ریاضی</option><option>تولید سؤال‌های سطح‌بندی‌شده</option><option>تحلیل خطاهای رایج دانش‌آموزان</option><option>طراحی فعالیت گروهی یا کاوشگری</option><option value="__other">سایر موارد</option>
+        </select></div>
+        <div class="field hidden" id="customOutputWrap" style="margin-top:12px"><label for="customOutput">نوع خروجی دلخواه</label><input id="customOutput" type="text" placeholder="خروجی موردنظر را شرح دهید"></div>
+        <div class="field hidden" id="htmlFeaturesWrap" style="margin-top:16px"><span class="field-label">قابلیت‌های ویژه ابزار HTML</span><div class="choices grid" id="htmlFeatures">
+          <label class="choice"><input type="checkbox" value="بازی یا تمرین تعاملی" checked>بازی یا تمرین تعاملی</label><label class="choice"><input type="checkbox" value="دست‌ورزی مجازی">دست‌ورزی مجازی</label><label class="choice"><input type="checkbox" value="نمایش مرحله‌به‌مرحله حل">نمایش مرحله‌به‌مرحله حل</label><label class="choice"><input type="checkbox" value="شبیه‌سازی پویا">شبیه‌سازی پویا</label><label class="choice"><input type="checkbox" value="نمودار تعاملی">نمودار تعاملی</label><label class="choice"><input type="checkbox" value="هندسه پویا">هندسه پویا</label><label class="choice"><input type="checkbox" value="آزمون با بازخورد">آزمون با بازخورد</label><label class="choice"><input type="checkbox" value="ترکیبی از چند قابلیت">ترکیبی از چند قابلیت</label>
+        </div></div>
+        <div class="field hidden" id="lessonOptionsWrap" style="margin-top:16px"><span class="field-label">جزئیات تکمیلی طرح درس / کاربرگ / آزمون</span><div class="choices grid" id="lessonOptions">
+          <label class="choice"><input type="checkbox" value="زمان‌بندی فعالیت‌ها" checked>زمان‌بندی فعالیت‌ها</label><label class="choice"><input type="checkbox" value="اهداف رفتاری">اهداف رفتاری</label><label class="choice"><input type="checkbox" value="پرسش‌های معلم و پاسخ‌های احتمالی">پرسش‌های معلم و پاسخ‌های احتمالی</label><label class="choice"><input type="checkbox" value="خطاهای رایج و روش اصلاح">خطاهای رایج و روش اصلاح</label><label class="choice"><input type="checkbox" value="شیوه ارزشیابی">شیوه ارزشیابی</label><label class="choice"><input type="checkbox" value="پاسخ‌نامه تشریحی">پاسخ‌نامه تشریحی</label>
+        </div></div>
+      </section>
+      <section class="card" id="step3"><div class="card-head"><div class="step-num">۳</div><div><h2>رویکرد آموزشی</h2><p class="sub">می‌توانید بیش از یک رویکرد را انتخاب کنید.</p></div></div>
+        <div class="choices grid" id="approaches">
+          <label class="choice"><input type="checkbox" value="CPA: عینی، تصویری، انتزاعی">CPA: عینی، تصویری، انتزاعی</label><label class="choice"><input type="checkbox" value="یادگیری اکتشافی">یادگیری اکتشافی</label><label class="choice"><input type="checkbox" value="حل مسئله">حل مسئله</label><label class="choice"><input type="checkbox" value="یادگیری مبتنی بر مسئله">یادگیری مبتنی بر مسئله</label><label class="choice"><input type="checkbox" value="آموزش مستقیم همراه با تمرین هدایت‌شده">آموزش مستقیم + تمرین هدایت‌شده</label><label class="choice"><input type="checkbox" value="یادگیری مبتنی بر بازی">یادگیری مبتنی بر بازی</label><label class="choice"><input type="checkbox" value="ارزشیابی تکوینی">ارزشیابی تکوینی</label><label class="choice"><input type="checkbox" value="یادگیری مشارکتی">یادگیری مشارکتی</label><label class="choice"><input type="checkbox" value="آموزش متناسب با سطح دانش‌آموز">آموزش متناسب با سطح دانش‌آموز</label>
+        </div>
+        <div class="section-note hidden" id="cpaNote"><b>رویکرد CPA فعال است.</b> پرامپت شامل فعالیت عینی، بازنمایی تصویری، نمادگذاری انتزاعی و پیوند روشن میان سه مرحله خواهد بود. دست‌ورزی مجازی به‌عنوان جایگزین کامل ابزار فیزیکی معرفی نمی‌شود.</div>
+      </section>
+      <section class="card" id="step4"><div class="card-head"><div class="step-num">۴</div><div><h2>ویژگی‌های تعاملی و بازخورد</h2><p class="sub">قابلیت‌ها را متناسب با هدف درس انتخاب کنید.</p></div></div>
+        <div class="field"><span class="field-label">قابلیت‌های تعاملی</span><div class="choices grid" id="interactions">
+          <label class="choice"><input type="checkbox" value="لغزنده برای تغییر مقادیر">لغزنده تغییر مقدار</label><label class="choice"><input type="checkbox" value="دکمه‌های افزایش و کاهش">افزایش و کاهش</label><label class="choice"><input type="checkbox" value="ورودی عددی">ورودی عددی</label><label class="choice"><input type="checkbox" value="نمایش مرحله‌به‌مرحله">نمایش مرحله‌به‌مرحله</label><label class="choice"><input type="checkbox" value="راهنمای گام بعدی">راهنمای گام بعدی</label><label class="choice"><input type="checkbox" value="بازخورد توضیحی پس از پاسخ">بازخورد توضیحی</label><label class="choice"><input type="checkbox" value="نمایش پاسخ صحیح همراه با استدلال">پاسخ صحیح همراه استدلال</label><label class="choice"><input type="checkbox" value="راهنمایی تدریجی بدون افشای فوری جواب">راهنمایی تدریجی</label><label class="choice"><input type="checkbox" value="امکان تلاش مجدد">تلاش مجدد</label><label class="choice"><input type="checkbox" value="امتیازدهی آموزشی">امتیازدهی آموزشی</label><label class="choice"><input type="checkbox" value="سطح‌بندی آسان، متوسط و دشوار">سطح‌بندی سؤال‌ها</label><label class="choice"><input type="checkbox" value="تولید تمرین جدید">تمرین جدید</label><label class="choice"><input type="checkbox" value="دکمه شروع مجدد">شروع مجدد</label><label class="choice"><input type="checkbox" value="نمایش تاریخچه مراحل یا رد حرکت">تاریخچه مراحل / رد حرکت</label><label class="choice"><input type="checkbox" value="نمایش هم‌زمان شکل و رابطه ریاضی">شکل و رابطه هم‌زمان</label><label class="choice"><input type="checkbox" value="سؤال انتقالی">سؤال انتقالی</label><label class="choice"><input type="checkbox" value="گزارش عملکرد دانش‌آموز">گزارش عملکرد</label>
+        </div></div>
+        <div class="divider"></div>
+        <div class="fields"><div class="field"><label for="difficulty">سطح دشواری</label><select id="difficulty"><option>ترکیبی</option><option>آسان</option><option>متوسط</option><option>دشوار</option></select></div><div class="field"><label for="feedback">نوع بازخورد</label><select id="feedback"><option>توضیح علت خطا</option><option>فقط اعلام درستی یا نادرستی</option><option>راهنمایی مرحله‌ای</option><option>تحلیل روش حل</option><option>بازخورد متناسب با خطای رایج</option></select></div><div class="field"><label for="guidance">میزان راهنمایی</label><select id="guidance"><option>متوسط</option><option>زیاد</option><option>کم</option></select></div><div class="field"><label for="answerType">نوع پاسخ مورد انتظار</label><select id="answerType"><option>ترکیبی متناسب با موضوع</option><option>انتخاب گزینه</option><option>ورود عدد</option><option>نوشتن عبارت ریاضی</option><option>توضیح کلامی</option><option>رسم یا تکمیل شکل</option></select></div></div>
+      </section>
+      <section class="card" id="step5"><div class="card-head"><div class="step-num">۵</div><div><h2>مشخصات تحویل و محدودیت‌ها</h2><p class="sub">این گزینه‌ها در پرامپت نهایی لحاظ می‌شوند.</p></div></div>
+        <div class="choices grid" id="constraints">
+          <label class="choice"><input type="checkbox" value="فایل مستقل HTML با CSS و JavaScript داخلی" checked>فایل مستقل HTML</label><label class="choice"><input type="checkbox" value="فارسی و راست‌چین" checked>فارسی و راست‌چین</label><label class="choice"><input type="checkbox" value="بدون نیاز به نصب" checked>بدون نیاز به نصب</label><label class="choice"><input type="checkbox" value="بدون اینترنت، API یا کتابخانه خارجی" checked>بدون اینترنت و کتابخانه خارجی</label><label class="choice"><input type="checkbox" value="طراحی واکنش‌گرا برای موبایل و رایانه" checked>واکنش‌گرا</label><label class="choice"><input type="checkbox" value="طراحی حرفه‌ای و ساده">طراحی حرفه‌ای</label><label class="choice"><input type="checkbox" value="فرمول‌ها بدون وابستگی به اینترنت نمایش داده شوند">فرمول بدون اینترنت</label><label class="choice"><input type="checkbox" value="امکان چاپ یا ذخیره خروجی">چاپ یا ذخیره خروجی</label><label class="choice"><input type="checkbox" value="راهنمای معلم">راهنمای معلم</label><label class="choice"><input type="checkbox" value="راهنمای استفاده دانش‌آموز">راهنمای دانش‌آموز</label><label class="choice"><input type="checkbox" value="کد خوانا و قابل ویرایش">کد خوانا و قابل ویرایش</label><label class="choice"><input type="checkbox" value="آزمون صحت محاسبات و کنترل عملکرد دکمه‌ها">آزمون صحت محاسبات و دکمه‌ها</label>
+        </div>
+        <div class="field" style="margin-top:16px"><label for="notes">ایده یا توضیحات تکمیلی دبیر</label><textarea id="notes" rows="5" placeholder="می‌خواهم برای پایه هفتم، جمع عددهای صحیح را با محور اعداد آموزش دهم. دانش‌آموز با تغییر مقدار حرکت روی محور، نتیجه را ببیند؛ رد حرکت مشخص باشد؛ ابتدا فعالیت تصویری انجام شود و سپس عبارت ریاضی نمایش داده شود. بازخوردها مفهومی باشند و در پایان چند تمرین جدید ارائه شود."></textarea><div class="hint">توضیحات شما عیناً در پرامپت حفظ می‌شود و بر انتخاب‌های دیگر اولویت حذف‌کننده ندارد.</div></div>
+        <div class="fields" style="margin-top:14px"><div class="field"><label for="designStyle">سبک طراحی</label><select id="designStyle"><option>حرفه‌ای، روشن و آموزشی</option><option>ساده و مینیمال</option><option>شاد و دانش‌آموزپسند</option><option>علمی و فناورانه</option></select></div><div class="field"><label for="questionCount">تعداد سؤال/تمرین (در صورت کاربرد)</label><input id="questionCount" type="number" min="1" max="100" value="۶"></div></div>
+      </section>
+      <section class="card" id="step6"><div class="card-head"><div class="step-num">۶</div><div><h2>بازبینی و تولید پرامپت</h2><p class="sub">چک‌لیست فقط میزان کامل‌بودن اطلاعات ورودی را نشان می‌دهد، نه تضمین کیفیت خروجی هوش مصنوعی.</p></div></div><div class="btn-row"><button class="btn btn-primary" id="generateBtn" type="button">ساخت پرامپت</button><button class="btn btn-light" id="shortBtn" type="button">نسخه کوتاه</button><button class="btn btn-light" id="fullBtn" type="button">نسخه کامل</button></div><p class="tiny" style="margin-bottom:0">در صورت خالی‌بودن فیلدهای اختیاری، پرامپت با پیش‌فرض‌های روشن تولید می‌شود.</p></section>
+    </div>
+    <aside class="side-col">
+      <section class="card side-card"><h2>چک‌لیست کیفیت ورودی</h2><p class="sub">وضعیت موارد اصلی پرامپت</p><div class="score"><div class="score-ring" id="scoreRing"><strong id="scoreValue">۰٪</strong></div><div><b id="scoreLabel">در حال بررسی</b><div class="tiny" id="scoreDetail">موارد تکمیل‌شده از ۹ معیار</div></div></div><div class="checklist" id="checklist"></div></section>
+      <section class="card"><h2>نمونه‌های آماده</h2><p class="sub" style="margin-bottom:12px">انتخاب نمونه، فرم را واقعاً تکمیل و پرامپت را تولید می‌کند.</p><div class="sample-list">
+        <button class="sample" type="button" data-sample="integer"><span><b>۱. جمع و تفریق عددهای صحیح</b><small>پایه هفتم · محور اعداد</small></span><span>←</span></button>
+        <button class="sample" type="button" data-sample="balance"><span><b>۲. مفهوم معادله</b><small>پایه هفتم · مدل تساوی</small></span><span>←</span></button>
+        <button class="sample" type="button" data-sample="cpa"><span><b>۳. معادله چندمرحله‌ای با CPA</b><small>پایه هشتم · خطاهای رایج</small></span><span>←</span></button>
+        <button class="sample" type="button" data-sample="graph"><span><b>۴. کشف رابطه و نمودار</b><small>پایه نهم · متغیرها</small></span><span>←</span></button>
+        <button class="sample" type="button" data-sample="lesson"><span><b>۵. طرح درس کامل CPA</b><small>پایه هشتم · طرح درس</small></span><span>←</span></button>
+      </div></section>
+      <section class="card"><h2>مبنای طراحی و منابع</h2><p class="sub" style="margin-bottom:10px">اصول آموزشی و دسترس‌پذیری برای راهنمای تولید پرامپت</p><div class="sample-list"><a class="sample" href="https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/maths-ks-2-3" target="_blank" rel="noopener noreferrer"><span><b>EEF · آموزش ریاضی</b><small>بازنمایی‌ها، ارزشیابی و بدفهمی‌ها</small></span><span>↗</span></a><a class="sample" href="https://udlguidelines.cast.org/" target="_blank" rel="noopener noreferrer"><span><b>CAST · UDL 3.0</b><small>طراحی فراگیر و راه‌های متنوع یادگیری</small></span><span>↗</span></a><a class="sample" href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer"><span><b>W3C · WCAG</b><small>دسترس‌پذیری رابط‌های دیجیتال</small></span><span>↗</span></a></div><p class="tiny" style="margin-bottom:0">منابع، چارچوب راهنما هستند؛ به‌معنای تأیید رسمی ابزار یا تضمین صحت خروجی تولیدشده نیستند.</p></section>
+      <section class="card"><h2>راهنمای سریع</h2><p class="sub">برای نتیجه بهتر، هدف یادگیری را روشن بنویسید و توضیح دهید دانش‌آموز چه کاری انجام دهد یا بفهمد.</p><div class="section-note">برای ابزار HTML، پرامپت از مدل می‌خواهد کد کامل و قابل اجرا ارائه کند و صادقانه محدودیت‌های آزمون‌نشدن در مرورگر را اعلام کند.</div></section>
+    </aside>
+  </div>
+  <section class="card result-card" id="resultCard"><div class="result-head"><div><h2>پرامپت نهایی</h2><p class="sub">متن را می‌توانید مستقیماً ویرایش کنید.</p></div><div class="result-tools"><button class="btn btn-primary" id="copyBtn" type="button">کپی پرامپت</button><button class="btn btn-teal" id="downloadBtn" type="button">ذخیره فایل متنی</button><button class="btn btn-light" id="sampleBtn" type="button">بارگذاری نمونه</button><button class="btn btn-light" id="rebuildBtn" type="button">ساخت مجدد</button><button class="btn btn-danger" id="resetBtn" type="button">شروع دوباره</button></div></div><textarea id="promptOutput" class="result-area" aria-label="پرامپت تولیدشده" spellcheck="false" placeholder="پس از انتخاب تنظیمات، روی «ساخت پرامپت» بزنید."></textarea><div class="result-meta"><span id="promptStats">۰ واژه · هنوز پرامپتی تولید نشده است.</span><span>MathEdu789 · آموزش ریاضی</span></div></section>
+</main>
+<footer>MathEdu789 | آموزش ریاضی · ابزار تولید پرامپت به‌صورت محلی در مرورگر اجرا می‌شود.</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const all=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
+let promptMode='full', lastPrompt='';
+const persianDigits=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[Number(d)]);
+function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2800)}
+function selected(container){return all('input[type=checkbox]:checked',$(container)).map(x=>x.value)}
+function val(id){return $(id).value.trim()}
+function actualTopic(){return val('topic')==='__other'?(val('customTopic')||'موضوع دلخواه تعیین‌نشده'):val('topic')}
+function actualOutput(){return val('outputType')==='__other'?(val('customOutput')||'خروجی دلخواه تعیین‌نشده'):val('outputType')}
+function isCPA(){return selected('approaches').some(x=>x.startsWith('CPA:'))}
+function isHTML(){return actualOutput().toLowerCase().includes('html')||actualOutput().includes('ابزار تعاملی')}
+function updateConditional(){
+ $('customTopicWrap').classList.toggle('hidden',val('topic')!=='__other');
+ $('customOutputWrap').classList.toggle('hidden',val('outputType')!=='__other');
+ $('htmlFeaturesWrap').classList.toggle('hidden',!isHTML());
+ const out=actualOutput();
+ $('lessonOptionsWrap').classList.toggle('hidden',!(out.includes('طرح درس')||out.includes('کاربرگ')||out.includes('آزمون')||out.includes('سؤال')||out.includes('سوال')));
+ $('cpaNote').classList.toggle('hidden',!isCPA());
+ updateChecklist();
+}
+function checklistData(){
+ const checks=[
+ ['پایه و موضوع مشخص است',!!val('grade')&&!!actualTopic()&&actualTopic()!=='موضوع دلخواه تعیین‌نشده'],
+ ['هدف یادگیری روشن است',val('objective').length>=8],
+ ['نوع خروجی مشخص است',!!actualOutput()&&actualOutput()!=='خروجی دلخواه تعیین‌نشده'],
+ ['فعالیت با سطح دانش‌آموز متناسب است',!!val('level')],
+ ['روش آموزش مشخص است',selected('approaches').length>0],
+ ['پاسخ و بازخورد آموزشی تعریف شده است',!!val('feedback')&&!!val('answerType')],
+ ['ارزشیابی در نظر گرفته شده است',selected('interactions').some(x=>/سؤال انتقالی|گزارش عملکرد|بازخورد|پاسخ صحیح|سطح‌بندی/.test(x))||selected('lessonOptions').some(x=>/ارزشیابی|پاسخ‌نامه/.test(x))],
+ ['محدودیت‌های فنی لازم مشخص شده‌اند',selected('constraints').length>0],
+ ['صحت ریاضی و عملکرد کنترل‌ها لحاظ شده است',!isHTML()||selected('constraints').some(x=>x.includes('آزمون صحت'))],
+ ['پیوند سه مرحله CPA روشن است',!isCPA()||true]
+ ];
+ return checks;
+}
+function updateChecklist(){
+ const checks=checklistData(),done=checks.filter(c=>c[1]).length,percent=Math.round(done/checks.length*100);
+ $('scoreValue').textContent=persianDigits(percent)+'٪';$('scoreRing').style.setProperty('--score',percent+'%');
+ $('scoreLabel').textContent=percent>=85?'ورودی نسبتاً کامل':percent>=60?'قابل بهبود':'نیازمند تکمیل';
+ $('scoreDetail').textContent=persianDigits(done)+' مورد از '+persianDigits(checks.length)+' معیار';
+ $('checklist').innerHTML=checks.map(c=>'<label class="checkitem"><input type="checkbox" '+(c[1]?'checked':'')+' disabled><span>'+c[0]+'</span><span class="status">'+(c[1]?'تکمیل':'نیاز به توجه')+'</span></label>').join('');
+ $('progressBar').style.width=percent+'%';$('progressBar').parentElement.setAttribute('aria-valuenow',percent);
+ const steps=[['step1','مشخصات آموزشی'],['step2','نوع خروجی'],['step3','رویکرد آموزشی'],['step4','ویژگی‌ها و بازخورد'],['step5','محدودیت‌ها'],['step6','بازبینی و تولید']];
+ let current=0;for(let i=0;i<steps.length;i++){if($(steps[i][0]).getBoundingClientRect().top<window.innerHeight*.65)current=i}
+ $('stepCaption').textContent='مرحله '+persianDigits(current+1)+' از ۶ · '+steps[current][1];
+}
+const CPA_TEXT=`رویکرد CPA را دقیق و مرتبط با همین مفهوم اجرا کن:
+۱) مرحله عینی (Concrete): فعالیتی با اشیای واقعی یا ابزارهای ملموس مناسب، مانند مهره، مکعب، کارت یا ترازو طراحی کن. دستورالعمل اجرایی و مشاهده‌ای که دانش‌آموز باید انجام دهد روشن باشد. تصریح کن که دست‌ورزی دیجیتال جایگزین کامل تجربه فیزیکی نیست.
+۲) مرحله تصویری (Pictorial): همان مفهوم و روابط مرحله عینی را با تصویر، محور، جدول، نمودار یا شکل معنادار بازنمایی کن؛ هر جزء تصویر معنای ریاضی مشخص داشته باشد.
+۳) مرحله انتزاعی (Abstract): از نمادها، عبارت‌ها و فرمول‌های ریاضی استفاده کن و توضیح بده هر نماد به کدام بخش مدل اشاره دارد؛ از حفظ‌کردن بی‌دلیل قواعد پرهیز کن.
+۴) پیوند و انتقال: نشان بده چگونه دانش‌آموز بین مدل عینی، تصویر و نماد رفت‌وبرگشت می‌کند. هر سه مرحله باید یک مفهوم واحد را پشتیبانی کنند. در پایان یک مسئله جدید برای سنجش انتقال یادگیری ارائه کن.`;
+function buildPrompt(mode='full'){
+ promptMode=mode;
+ const grade=val('grade')||'هفتم', topic=actualTopic(), output=actualOutput();
+ const chapter=val('chapter')||'بخش مرتبط کتاب درسی (در صورت نیاز تعیین شود)';
+ const objective=val('objective')||'هدف قابل سنجشی متناسب با موضوع و پایه تعریف کن و آن را در ابتدای خروجی صریح بنویس.';
+ const prereq=val('prereq')||'پیش‌نیازها را با توجه به موضوع و پایه شناسایی کن و در صورت نیاز یک مرور کوتاه قرار بده.';
+ const duration=val('duration')||'۳۰', level=val('level')||'ترکیبی', setting=val('setting')||'کل کلاس';
+ const approaches=selected('approaches'), features=selected('htmlFeatures'), interactions=selected('interactions'), constraints=selected('constraints'), lesson=selected('lessonOptions');
+ const cpa=approaches.some(x=>x.startsWith('CPA:'));
+ const lines=[];
+ lines.push('نقش و مأموریت','به‌عنوان متخصص آموزش ریاضی متوسطه اول، طراح آموزشی و طراح تجربه کاربری آموزشی عمل کن. محتوایی دقیق، قابل اجرا و متناسب با سن دانش‌آموز تولید کن. فهم مفهومی و استدلال ریاضی را بر حفظ‌کردن و پاسخ‌گویی مکانیکی مقدم بدان.','');
+ lines.push('۱. مشخصات آموزشی',`- پایه: ${grade}`,`- موضوع: ${topic}`,`- فصل یا بخش: ${chapter}`,`- هدف یادگیری: ${objective}`,`- پیش‌نیازها: ${prereq}`,`- سطح کلاس: ${level}`,`- مدت فعالیت: ${duration} دقیقه`,`- شیوه اجرا: ${setting}`,'');
+ lines.push('۲. نوع خروجی و جزئیات',`- خروجی مورد انتظار: ${output}`);
+ if(isHTML())lines.push('- قابلیت‌های ویژه: '+(features.join('، ')||'قابلیت‌های ضروری و متناسب با هدف را انتخاب کن؛ از افزودن موارد غیرضروری بپرهیز.'));
+ if(lesson.length)lines.push('- جزئیات تکمیلی درخواستی: '+lesson.join('، '));
+ lines.push('');
+ lines.push('۳. رویکرد آموزشی',`- رویکردهای منتخب: ${approaches.join('، ')||'رویکرد مناسب را با توجه به هدف انتخاب کن و دلیل انتخاب را کوتاه بیان کن.'}`);
+ if(cpa)lines.push('',CPA_TEXT);
+ lines.push('', '۴. طراحی فعالیت، تعامل و بازخورد',`- قابلیت‌های درخواستی: ${interactions.join('، ')||'تعاملات ضروری و ساده متناسب با نوع خروجی را پیشنهاد بده.'}`,`- سطح دشواری: ${val('difficulty')||'ترکیبی'}`,`- نوع بازخورد: ${val('feedback')||'توضیحی و مفهومی'}`,`- میزان راهنمایی: ${val('guidance')||'متوسط'}`,`- نوع پاسخ مورد انتظار: ${val('answerType')||'متناسب با موضوع'}`,`- تعداد سؤال یا تمرین در صورت کاربرد: ${val('questionCount')||'۶'}`);
+ lines.push('- بازخورد را به «درست/نادرست» محدود نکن؛ در صورت امکان دلیل ریاضی پاسخ یا علت خطای رایج را توضیح بده.');
+ lines.push('- در صورت مناسب‌بودن، راهنمایی را تدریجی ارائه کن و پاسخ نهایی را فوراً افشا نکن. فرصت تلاش مجدد بده.');
+ lines.push('- از دانش‌آموز بخواه روش خود را توضیح دهد. یک سؤال انتقالی تازه برای سنجش کاربرد یادگیری در موقعیتی متفاوت اضافه کن.');
+ lines.push('- اصول شواهد‌محور آموزش ریاضی را رعایت کن: از نمایش‌ها و دست‌ورزی‌ها هدفمند استفاده کن، ارتباط آن‌ها با ساختار ریاضی را روشن کن، دانش پیشین و بدفهمی‌های محتمل را بررسی کن، و بازخورد مشخصی بده که گام بعدی یادگیری را روشن کند.');
+ lines.push('- طراحی را فراگیر و دسترس‌پذیر انجام بده: متن خوانا، کنتراست مناسب، ناوبری با صفحه‌کلید، نشانه فوکوس واضح، دستورالعمل روشن و بیش از یک شیوه نمایش یا پاسخ در صورت تناسب فراهم کن.');
+ lines.push('- مثال‌ها، اعداد و محاسبات باید با موضوع و سطح پایه سازگار باشند. پاسخ صحیح هر سؤال را بررسی کن.');
+ lines.push('', '۵. مشخصات فنی و طراحی',`- سبک طراحی: ${val('designStyle')||'حرفه‌ای، روشن و آموزشی'}`,`- محدودیت‌ها و ترجیحات: ${constraints.join('؛ ')||'قالب تحویل را متناسب با نوع خروجی تعیین کن.'}`);
+ if(isHTML()){
+  lines.push('- تمام HTML، CSS و JavaScript ضروری را در یک فایل HTML کامل و مستقل قرار بده.');
+  lines.push('- هیچ بخش ضروری را به صورت شبه‌کد، توضیح جایگزین کد یا عبارت «بعداً اضافه کنید» باقی نگذار.');
+  lines.push('- همه دکمه‌ها، ورودی‌ها، لغزنده‌ها و کنترل‌ها باید واقعاً کار کنند؛ تغییر ورودی باید نتیجه، شکل یا نمودار مرتبط را به‌درستی به‌روزرسانی کند.');
+  lines.push('- ورودی‌ها را اعتبارسنجی کن، شرایط مرزی را مدیریت کن و از وابستگی غیرضروری به اینترنت، API یا کتابخانه خارجی اجتناب کن.');
+  lines.push('- رابط فارسی، راست‌چین، واکنش‌گرا، خوانا و قابل استفاده با صفحه‌کلید باشد. برای نمایش فرمول از روش بدون وابستگی اینترنتی استفاده کن.');
+  lines.push('- کنترل‌های قابل کلیک در موبایل فضای لمسی کافی داشته باشند؛ کنتراست متن و پس‌زمینه، فوکوس صفحه‌کلید و برچسب‌های ورودی را بررسی کن و از رنگ به‌تنهایی برای انتقال معنا استفاده نکن.');
+  lines.push('- منطق محاسباتی را از نمایش رابط تا حد امکان جدا نگه دار. از اعداد آزمایشی و چند حالت مرزی برای کنترل محاسبات استفاده کن.');
+  lines.push('- در پایان، چک‌لیست کنترل صحت ریاضی، عملکرد تمام کنترل‌ها، اندازه‌های مختلف صفحه و خطاهای احتمالی ارائه کن. اگر امکان اجرای واقعی کد در مرورگر را نداری، این محدودیت را صادقانه بیان کن و آزمون دستی پیشنهادی بده.');
+ }
+ if(output.includes('طرح درس')){
+  lines.push('', '۶. الزامات ویژه طرح درس', '- مشخصات کلی، اهداف مفهومی/مهارتی/نگرشی، پیش‌نیازها، وسایل و منابع را ارائه کن.');
+  lines.push('- زمان‌بندی دقیق مراحل، فعالیت معلم و دانش‌آموز، پرسش‌های راهبر و پاسخ‌های احتمالی دانش‌آموز را مشخص کن.');
+  if(cpa)lines.push('- فعالیت عینی، تصویری و انتزاعی را جداگانه با دستورالعمل اجرایی و پیوند روشن بنویس.');
+  lines.push('- خطاهای رایج و روش اصلاح، ارزشیابی تشخیصی/تکوینی/پایانی، تمرین‌های سطح‌بندی‌شده، تکلیف تکمیلی و معیار سنجش موفقیت را بگنجان.');
+ }
+ if(output.includes('آزمون')||output.includes('سؤال')||output.includes('سوال')||output.includes('کاربرگ')){
+  lines.push('', 'الزامات سؤال و ارزشیابی','- سؤال‌ها تکراری و صرفاً حفظی نباشند؛ تنوعی از درک مفهومی، محاسبه، کاربرد و استدلال داشته باشند.','- پاسخ‌نامه یا کلید پاسخ دقیق ارائه کن و برای پاسخ‌های تشریحی، راه‌حل گام‌به‌گام و بارم‌بندی پیشنهادی را مشخص کن؛ اگر منبع رسمی در اختیار نیست، بارم‌بندی را رسمی معرفی نکن.');
+ }
+ lines.push('', '۷. کنترل کیفیت و قالب تحویل','- خروجی را کامل، منظم و آماده استفاده ارائه کن؛ مراحل اجرا و نمونه سؤال/پاسخ‌های لازم را جا نینداز.','- پیش از تحویل، سازگاری هدف، فعالیت، بازخورد و ارزشیابی را بررسی کن. هر فرضی را که به دلیل نبود اطلاعات انجام داده‌ای، آشکارا اعلام کن.','- از ادعای بررسی یا اجرای واقعی چیزی که انجام نداده‌ای خودداری کن.');
+ const notes=val('notes');
+ if(notes)lines.push('', '۸. توضیحات تکمیلی دبیر (بدون حذف یا جایگزینی)',notes);
+ lines.push('', 'معیار موفقیت: دانش‌آموز بتواند مفهوم را توضیح دهد، روش خود را توجیه کند و آموخته را در یک موقعیت جدید به کار گیرد. محتوای تولیدشده ابزار پشتیبان تصمیم‌گیری دبیر است و جایگزین قضاوت حرفه‌ای او نیست.');
+ let result=lines.join('\n');
+ if(mode==='short'){
+  result=`به‌عنوان متخصص آموزش ریاضی متوسطه اول، برای پایه ${grade} و موضوع «${topic}» یک ${output} طراحی کن.\nهدف یادگیری: ${objective}\nسطح کلاس: ${level}؛ پیش‌نیاز: ${prereq}؛ مدت: ${duration} دقیقه؛ شیوه اجرا: ${setting}.\nرویکردها: ${approaches.join('، ')||'متناسب با هدف انتخاب شود'}.\n${cpa?CPA_TEXT+'\n':''}قابلیت‌ها: ${[...features,...interactions].join('، ')||'متناسب با موضوع'}.\nدشواری: ${val('difficulty')||'ترکیبی'}؛ بازخورد: ${val('feedback')||'توضیحی'}؛ نوع پاسخ: ${val('answerType')||'متناسب با موضوع'}.\n${isHTML()?'یک فایل HTML مستقل، کامل، فارسی، راست‌چین، واکنش‌گرا و بدون نیاز به اینترنت یا کتابخانه خارجی تحویل بده. همه کنترل‌ها و محاسبات باید واقعی و اعتبارسنجی‌شده باشند؛ هیچ شبه‌کد یا بخش ناقصی باقی نگذار. محدودیت آزمون واقعی مرورگر را صادقانه اعلام کن.':'خروجی کامل، اجرایی و متناسب با سطح پایه ارائه کن.'}\nبازخورد باید دلیل ریاضی را توضیح دهد، خطاهای رایج را پوشش دهد و یک تمرین انتقالی داشته باشد. محاسبات و پاسخ‌ها را کنترل کن.${notes?'\nتوضیحات دبیر: '+notes:''}`;
+ }
+ lastPrompt=result;$('promptOutput').value=result;updatePromptStats();$('resultCard').scrollIntoView({behavior:'smooth',block:'start'});toast(mode==='short'?'نسخه کوتاه پرامپت ساخته شد.':'پرامپت کامل ساخته شد.');
+}
+function updatePromptStats(){const t=$('promptOutput').value;const words=t.trim()?t.trim().split(/\s+/).length:0;$('promptStats').textContent=persianDigits(words)+' واژه · '+persianDigits(t.length)+' نویسه';}
+function fillSample(type){
+ const set=(id,v)=>$(id).value=v;
+ all('input[type=checkbox]',document).forEach(x=>x.checked=false);
+ const tick=(container,vals)=>all('input[type=checkbox]',$(container)).forEach(x=>x.checked=vals.includes(x.value));
+ const common={duration:'۳۰',level:'ترکیبی',setting:'کل کلاس',difficulty:'ترکیبی',feedback:'توضیح علت خطا',guidance:'متوسط',answerType:'ترکیبی متناسب با موضوع',questionCount:'۶',designStyle:'حرفه‌ای، روشن و آموزشی'};
+ Object.entries(common).forEach(([k,v])=>set(k,v));set('chapter','');set('prereq','');set('notes','');set('customTopic','');set('customOutput','');
+ if(type==='integer'){
+  set('grade','هفتم');set('topic','عددهای صحیح');set('objective','دانش‌آموز بتواند جمع و تفریق عددهای صحیح را روی محور اعداد نمایش دهد، جهت و اندازه حرکت را توضیح دهد و نتیجه را به عبارت ریاضی تبدیل کند.');set('prereq','مقایسه عددهای صحیح و جهت حرکت روی محور');set('outputType','ابزار تعاملی ریاضی با HTML');tick('approaches',['CPA: عینی، تصویری، انتزاعی','یادگیری اکتشافی','ارزشیابی تکوینی']);tick('htmlFeatures',['بازی یا تمرین تعاملی','نمایش مرحله‌به‌مرحله حل']);tick('interactions',['لغزنده برای تغییر مقادیر','نمایش مرحله‌به‌مرحله','راهنمای گام بعدی','بازخورد توضیحی پس از پاسخ','امکان تلاش مجدد','تولید تمرین جدید','نمایش تاریخچه مراحل یا رد حرکت','سؤال انتقالی']);set('notes','برای جمع و تفریق عددهای صحیح، محور اعداد داشته باش. دانش‌آموز با انتخاب عدد شروع و تغییر حرکت به چپ یا راست، رد حرکت را ببیند؛ ابتدا بازنمایی تصویری و سپس عبارت ریاضی نمایش داده شود. چند تمرین جدید و بازخورد مفهومی ارائه کن.');
+ }else if(type==='balance'){
+  set('grade','هفتم');set('topic','معادله و نامعادله');set('objective','دانش‌آموز مفهوم تساوی را با مدل ترازو توضیح دهد و ارتباط حفظ تعادل دو طرف با انجام عمل یکسان روی دو طرف معادله را بیان کند.');set('prereq','عملیات چهارگانه و مفهوم تساوی');set('outputType','فعالیت اکتشافی و کشف رابطه');tick('approaches',['CPA: عینی، تصویری، انتزاعی','یادگیری اکتشافی','حل مسئله']);tick('interactions',['نمایش مرحله‌به‌مرحله','بازخورد توضیحی پس از پاسخ','نمایش هم‌زمان شکل و رابطه ریاضی','سؤال انتقالی']);set('notes','از مدل ترازوی دوکفه‌ای برای نمایش معادله استفاده کن. دانش‌آموز با افزودن یا حذف وزن‌های برابر، تعادل را حفظ کند و سپس همان کار را به نمادهای جبری پیوند دهد.');
+ }else if(type==='cpa'){
+  set('grade','هشتم');set('topic','معادله و نامعادله');set('objective','دانش‌آموز بتواند معادله چندمرحله‌ای ساده را با حفظ تساوی حل کند، هر گام را توجیه کند و خطاهای رایج را تشخیص دهد.');set('chapter','معادله‌های چندمرحله‌ای');set('prereq','معادله یک‌مرحله‌ای و خواص تساوی');set('outputType','طرح درس کامل با رویکرد CPA');tick('approaches',['CPA: عینی، تصویری، انتزاعی','آموزش مستقیم همراه با تمرین هدایت‌شده','ارزشیابی تکوینی','آموزش متناسب با سطح دانش‌آموز']);tick('interactions',['نمایش مرحله‌به‌مرحله','بازخورد توضیحی پس از پاسخ','راهنمایی تدریجی بدون افشای فوری جواب','سؤال انتقالی']);tick('lessonOptions',['زمان‌بندی فعالیت‌ها','اهداف رفتاری','پرسش‌های معلم و پاسخ‌های احتمالی','خطاهای رایج و روش اصلاح','شیوه ارزشیابی','پاسخ‌نامه تشریحی']);set('notes','طرح درس شامل فعالیت ملموس با ترازو یا کارت، بازنمایی تصویری و سپس حل نمادین باشد. خطای انجام عمل متفاوت در دو طرف معادله را پیش‌بینی و با پرسش هدایت‌شده اصلاح کن.');
+ }else if(type==='graph'){
+  set('grade','نهم');set('topic','مختصات و نمودار');set('objective','دانش‌آموز بتواند با تغییر مقدار یک متغیر، تغییر متغیر دیگر را مشاهده کند، چند زوج مرتب را ثبت کند و رابطه میان جدول و نمودار را توضیح دهد.');set('prereq','محور مختصات، زوج مرتب و جدول داده');set('outputType','ابزار تعاملی ریاضی با HTML');tick('approaches',['یادگیری اکتشافی','حل مسئله','ارزشیابی تکوینی']);tick('htmlFeatures',['شبیه‌سازی پویا','نمودار تعاملی','نمایش مرحله‌به‌مرحله حل']);tick('interactions',['لغزنده برای تغییر مقادیر','ورودی عددی','نمایش هم‌زمان شکل و رابطه ریاضی','تولید تمرین جدید','سؤال انتقالی']);set('notes','ابزاری بساز که دانش‌آموز بتواند مقدار متغیر را تغییر دهد، زوج‌های مرتب و نمودار را ببیند و درباره الگوی تغییر توضیح دهد. از مقیاس‌گذاری روشن و برچسب‌های خوانا استفاده کن.');
+ }else{
+  set('grade','هشتم');set('topic','معادله و نامعادله');set('objective','دانش‌آموز مفهوم معادله را از مدل عینی به بازنمایی تصویری و نمادهای جبری پیوند دهد و راه‌حل را توضیح دهد.');set('prereq','عملیات چهارگانه و مفهوم تساوی');set('outputType','طرح درس کامل با رویکرد CPA');tick('approaches',['CPA: عینی، تصویری، انتزاعی','یادگیری اکتشافی','یادگیری مشارکتی','ارزشیابی تکوینی']);tick('interactions',['بازخورد توضیحی پس از پاسخ','راهنمایی تدریجی بدون افشای فوری جواب','سؤال انتقالی']);tick('lessonOptions',['زمان‌بندی فعالیت‌ها','اهداف رفتاری','پرسش‌های معلم و پاسخ‌های احتمالی','خطاهای رایج و روش اصلاح','شیوه ارزشیابی','پاسخ‌نامه تشریحی']);set('notes','طرح درس کامل شامل اهداف قابل سنجش، فعالیت‌های عینی، تصویری و انتزاعی، پرسش‌های راهبر، پاسخ‌های احتمالی دانش‌آموزان، خطاهای رایج، ارزشیابی و تمرین انتقالی ارائه کن.');
+ }
+ updateConditional();buildPrompt('full');window.scrollTo({top:0,behavior:'smooth'});toast('نمونه بارگذاری شد؛ می‌توانید تنظیمات را تغییر دهید.');
+}
+function getSettings(){
+ const data={fields:{},checks:{}};
+ all('input,select,textarea',document).forEach(el=>{if(!el.id)return;if(el.type!=='checkbox')data.fields[el.id]=el.value});
+ ['htmlFeatures','lessonOptions','approaches','interactions','constraints'].forEach(group=>{data.checks[group]=selected(group)});
+ return data;
+}
+function applySettings(data){
+ if(!data||typeof data!=='object')return;
+ const fields=data.fields||data;
+ all('input,select,textarea',document).forEach(el=>{if(!el.id||!(el.id in fields)||el.type==='checkbox')return;el.value=fields[el.id]});
+ if(data.checks){Object.entries(data.checks).forEach(([group,values])=>{const chosen=new Set(values||[]);if($(group))all('input[type=checkbox]',$(group)).forEach(el=>el.checked=chosen.has(el.value))})}
+ updateConditional();toast('تنظیمات بازیابی شد.');
+}
+$('topic').addEventListener('change',updateConditional);$('outputType').addEventListener('change',updateConditional);
+all('input,select,textarea',document).forEach(el=>{el.addEventListener('change',()=>{updateConditional();});});
+$('generateBtn').addEventListener('click',()=>buildPrompt('full'));$('fullBtn').addEventListener('click',()=>buildPrompt('full'));$('shortBtn').addEventListener('click',()=>buildPrompt('short'));$('rebuildBtn').addEventListener('click',()=>buildPrompt(promptMode));
+$('promptOutput').addEventListener('input',updatePromptStats);
+$('copyBtn').addEventListener('click',async()=>{const text=$('promptOutput').value;if(!text.trim()){toast('ابتدا پرامپت را بسازید.');return}try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);toast('پرامپت کپی شد.')}else throw new Error('clipboard unavailable')}catch(e){$('promptOutput').focus();$('promptOutput').select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}toast(ok?'پرامپت کپی شد. اگر نشد، متن انتخاب‌شده را دستی کپی کنید.':'کپی خودکار در این مرورگر در دسترس نیست؛ متن انتخاب شده است، Ctrl+C را بزنید.')}});
+$('downloadBtn').addEventListener('click',()=>{const text=$('promptOutput').value;if(!text.trim()){toast('ابتدا پرامپت را بسازید.');return}const blob=new Blob(['\ufeff'+text],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='MathEdu789-prompt.txt';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);toast('فایل متنی آماده شد.')});
+$('sampleBtn').addEventListener('click',()=>fillSample('integer'));
+all('[data-sample]').forEach(b=>b.addEventListener('click',()=>fillSample(b.dataset.sample)));
+$('resetBtn').addEventListener('click',()=>{if(!confirm('همه ورودی‌ها پاک شوند و فرم از ابتدا آغاز شود؟'))return;all('input[type=checkbox]',document).forEach(x=>x.checked=false);$('grade').value='هفتم';$('topic').selectedIndex=0;$('outputType').selectedIndex=0;$('level').value='ترکیبی';$('setting').value='کل کلاس';$('duration').value='۳۰';$('difficulty').value='ترکیبی';$('feedback').value='توضیح علت خطا';$('guidance').value='متوسط';$('answerType').selectedIndex=0;$('questionCount').value='۶';$('designStyle').selectedIndex=0;['chapter','objective','prereq','customTopic','customOutput','notes','promptOutput'].forEach(id=>$(id).value='');['htmlFeatures','approaches','interactions','constraints'].forEach(id=>{if(id==='constraints')return;});all('#constraints input[value="فایل مستقل HTML با CSS و JavaScript داخلی"],#constraints input[value="فارسی و راست‌چین"],#constraints input[value="بدون نیاز به نصب"],#constraints input[value="بدون اینترنت، API یا کتابخانه خارجی"],#constraints input[value="طراحی واکنش‌گرا برای موبایل و رایانه"]').forEach(x=>x.checked=true);updateConditional();updatePromptStats();window.scrollTo({top:0,behavior:'smooth'});toast('فرم پاک‌سازی شد.')});
+$('savePrefs').addEventListener('click',()=>{try{localStorage.setItem('mathedu789-settings',JSON.stringify(getSettings()));toast('تنظیمات در همین مرورگر ذخیره شد.')}catch(e){toast('ذخیره محلی در این مرورگر ممکن نیست.')}});
+$('loadPrefs').addEventListener('click',()=>{try{const raw=localStorage.getItem('mathedu789-settings');if(!raw){toast('تنظیمات ذخیره‌شده‌ای پیدا نشد.');return}applySettings(JSON.parse(raw))}catch(e){toast('بازیابی تنظیمات انجام نشد.')}});
+window.addEventListener('scroll',updateChecklist,{passive:true});
+updateConditional();updateChecklist();updatePromptStats();
+})();
+</script>
+</body>
+</html>
